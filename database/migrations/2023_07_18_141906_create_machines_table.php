@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('machines', function (Blueprint $table) {
-            $table->id();
-            $table->string('name',220);
-            $table->timestamps();
+            $table->id();//faz uma id auto incrementavel e como primary key ja
+            $table->string('name',220);//quando é varchar, colocamos o nome da coluna e o número de caracteres
+            $table->timestamps();//data e hora
         });
     }
 
