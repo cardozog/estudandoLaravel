@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="listar">
     <h1>teste</h1>
 
     <!--cada resultado de $machines (query la do banco) sera guardado em $machine, portanto imprima -->
