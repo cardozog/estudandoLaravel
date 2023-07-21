@@ -1,6 +1,9 @@
 <x-layout title="listar">
-    <h1>teste</h1>
 
+
+    <a href="{{route('machines.create')}}">Cadastrar </a>
+        <h1>teste</h1>
+    @include('components/flash-message')
     <!--cada resultado de $machines (query la do banco) sera guardado em $machine, portanto imprima -->
     <table>
         <thead>
@@ -9,10 +12,10 @@
         </thead>
         <tbody>
             @foreach ($machines as $machine)
-            <tr> 
-            <td>{{$machine->id}}</td>
-            <td>{{$machine->name}}</td>
-            </tr>    
+            <tr>
+                <td>{{$machine->id}}</td>
+                <td>{{$machine->name}}</td>
+            </tr>
             @endforeach
         </tbody>
     </table>
