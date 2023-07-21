@@ -20,3 +20,14 @@ DB_PASSWORD=
 As views ficam na pasta resources, onde temos as views genericas em \components
 E o conteudo dessas views na pasta com o nome de cada classe.
 Além de ter uma pasta css e outra js sabemos o pq. 
+
+
+
+
+Padrão para criar uma nova página:
+
+1- Criar a ROTA dela (\routes\web.php)
+2- Criar função na CONTROLLER do objeto  (nesse caso é \app\Controllers\MachinesController.php)
+
+
+

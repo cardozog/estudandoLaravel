@@ -16,9 +16,10 @@ class MachinesController
         return view('machines.index')->with('machines', $machines);
     }
 
-    public function show($id)
+    //chama com uma requisição do banco de dados la da model
+    public function show(Machine $machine)
     {
-        echo "<h1> Visualizar  $id</h1>";
+        return view('machines.show')->with('machine',$machine);
     }
 
     //carregar a pagina 

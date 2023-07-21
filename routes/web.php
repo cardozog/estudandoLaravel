@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-/* ESSAS ROTAS SÃO AS PERSONALIZADAS
+
 //página inicial
 Route::get('/',[MachinesController::class,'index']);
-
+/* ESSAS ROTAS SÃO AS PERSONALIZADAS
 //listar todos
 Route::get('/listar',[MachinesController::class,'index']);
 
