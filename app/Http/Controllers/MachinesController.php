@@ -16,10 +16,10 @@ class MachinesController
         return view('machines.index')->with('machines', $machines);
     }
 
-    //chama com uma requisição do banco de dados la da model
+    //chama com uma requisição do banco de dados com um objeto igual ao da model 
     public function show(Machine $machine)
     {
-        return view('machines.show')->with('machine', $machine);
+        return view('machines.show')->with('machine',$machine);
     }
 
     //carregar a pagina 
@@ -43,7 +43,6 @@ class MachinesController
         //Somente o campo nome
         Machine::create($request->only('name'));
 
-        //com uma view dentro da outra, usamos aquele x-layout la
         return redirect('machines')->with('success', 'Máquina cadastrada com sucesso!');
     }
 
@@ -66,3 +65,4 @@ class MachinesController
         return redirect()->route('machines.index')->with('success', 'Máquina excluída com sucesso!');
     }
 }
+

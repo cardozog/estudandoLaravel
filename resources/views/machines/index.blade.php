@@ -4,6 +4,7 @@
     <a href="{{route('machines.create')}}">Cadastrar </a>
     <h1>teste</h1>
     @include('components/flash-message')
+
     <!--cada resultado de $machines (query la do banco) sera guardado em $machine, portanto imprima -->
     <table>
         <thead>
