@@ -19,7 +19,7 @@ class MachinesController
     //chama com uma requisição do banco de dados la da model
     public function show(Machine $machine)
     {
-        return view('machines.show')->with('machine',$machine);
+        return view('machines.show')->with('machine', $machine);
     }
 
     //carregar a pagina 
@@ -44,6 +44,25 @@ class MachinesController
         Machine::create($request->only('name'));
 
         //com uma view dentro da outra, usamos aquele x-layout la
-        return redirect('machines')->with('success','Máquina cadastrada com sucesso!');
+        return redirect('machines')->with('success', 'Máquina cadastrada com sucesso!');
+    }
+
+    public function edit(Machine $machine)
+    {
+        return view('machines.edit')->with('machine', $machine);
+    }
+
+    public function update(Request $request, Machine $machine)
+    {
+        $machine->fill($request->all())->save();
+
+        return redirect()->route('machines.index')->with('success', 'Máquina editada com sucesso!');
+    }
+
+    public function destroy(Machine $machine)
+    {
+        $machine->delete();
+
+        return redirect()->route('machines.index')->with('success', 'Máquina excluída com sucesso!');
     }
 }
